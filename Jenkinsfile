@@ -1,10 +1,3 @@
-properties([
-	buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10')), 
-	parameters([
-		string(defaultValue: '', description: '', name: 'dummy', trim: false)
-	])
-])
-
 node {
    def mvnHome
    stage('Preparation') { // for display purposes
